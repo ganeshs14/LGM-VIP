@@ -9,13 +9,25 @@ const addItem = () => {
 
   const outputList =
   `
-  <div class="p-3" id=${itemList.id}>
+  <div class="col p-3">
       <div class="mb-3 d-flex gap-3">
         <h5>${itemList.list__Item}</h5>
-        <button type="button" class="btn btn-danger shadow"><i class="fas fa-trash-alt"></i></button>
+        <button type="button" class="btn btn-danger shadow" id=${itemList.id} onclick="deleteButton.apply(this, arguments)"><i class="fas fa-trash-alt"  id=${itemList.id} onclick="deleteButton.apply(this, arguments)"></i></button>
       </div>
   </div>
   `
 
   taskContainer.insertAdjacentHTML("beforeend", outputList);
 };
+
+
+const deleteButton = (event) => {
+  event = window.event;
+  const targetID = event.target.id;
+  const tagname = event.target.tagname;
+
+  if(tagname === "BUTTON")
+    return taskContainer.removeChild(event.target.parentNode.parentNode);
+  else
+   return taskContainer.removeChild(event.target.parentNode.parentNode.parentNode);
+}
