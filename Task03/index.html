@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Task03 Form</title>
+</head>
+
+<body>
+
+  <!-- Navigaton Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bolder text-warning" href="#">TASK</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col mt-5">
+        <form class="card shadow-20 p-4" action="index.html" method="post">
+          <div class="mb-3">
+            <label for="image__url" class="form-label">Image Url</label>
+            <input type="url" class="form-control" id="image__url" aria-describedby="Image Url" placeholder="htps://example.com/image.png">
+          </div>
+
+          <div class="mb-3">
+            <label for="f__name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="f__name" aria-describedby="Full Name" placeholder="Enter Full Name">
+          </div>
+
+          <div class="mb-3">
+            <label for="job__title" class="form-label">Job Title</label>
+            <input type="text" class="form-control" id="job__title" aria-describedby="Job Title" placeholder="Enter Job Title">
+          </div>
+
+          <div class="mb-3">
+            <label for="job__description" class="form-label">Job Description</label>
+            <textarea rows=5 type="text" class="form-control" id="job__description" aria-describedby="Task Description" placeholder="Enter Job Description"></textarea>
+          </div>
+
+        </form>
+        <div class="mb-3">
+          <button type="button" class="form-control btn-warning" onclick="saveChanges()" value="ADD">kjgbhigb</button>
+        </div>
+
+      </div>
+
+      <div class="col task__container">
+        <h3 class="display-3 f_title" style="color:gold;text-align:center;">Filled Forms</h3>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="script.js"> </script>
+</body>
+
+</html>
