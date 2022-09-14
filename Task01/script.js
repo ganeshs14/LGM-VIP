@@ -1,5 +1,5 @@
 const taskContainer = document.querySelector(".task__container");
-console.log(taskContainer);
+// console.log(taskContainer);
 
 const addItem = () => {
   const itemList = {
