@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous"
     referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
-  <title>Task03 Form</title>
+  <title>Task03 Enrollment Form</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
   <!-- Navigaton Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bolder text-warning" href="#">TASK</a>
+      <a class="navbar-brand fw-bolder text-warning" href="#">Enrollment Form</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -25,6 +25,9 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
         </ul>
+        <form class="forms">
+          <a href="index.html"><button class="btn btn-outline-warning" type="button"><i class="fas fa-trash-alt"></i> Clear All</button></a>
+        </form>
       </div>
     </div>
   </nav>
@@ -44,18 +47,31 @@
           </div>
 
           <div class="mb-3">
-            <label for="job__title" class="form-label">Job Title</label>
-            <input type="text" class="form-control" id="job__title" aria-describedby="Job Title" placeholder="Enter Job Title">
+            <label for="e__mail" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="e__mail" aria-describedby="E-mail" placeholder="Enter E-mail">
           </div>
 
           <div class="mb-3">
-            <label for="job__description" class="form-label">Job Description</label>
-            <textarea rows=5 type="text" class="form-control" id="job__description" aria-describedby="Task Description" placeholder="Enter Job Description"></textarea>
+            <label for="web__site" class="form-label">Website</label>
+            <input type="url" class="form-control" id="web__site" aria-describedby="Website" placeholder="Enter Website 'https://www.website.com'">
           </div>
 
+          <div class="mb-3 d-flex gap-3" id="gender__mf">
+            <label for="gender__mf">Gender</label>
+            <input type="radio" id="gender__m" name="gender" value="Male"> Male
+            <input type="radio" id="gender__f" name="gender" value="Female"> Female
+          </div>
+
+          <div class="mb-3 d-flex gap-3" id="skills">
+            <label for="skills">Skills </label>
+            <input type="checkbox" id="html" name="skill" value="HTML"> HTML
+            <input type="checkbox" id="css" name="skill" value="CSS"> CSS
+            <input type="checkbox" id="js" name="skill" value="JavaScript"> JavaScript
+          </div>
         </form>
+
         <div class="mb-3">
-          <button type="button" class="form-control btn-warning" onclick="saveChanges()" value="ADD">kjgbhigb</button>
+          <button type="button" class="form-control btn-warning" onclick="saveChanges()" value="ADD"> ADD</button>
         </div>
 
       </div>

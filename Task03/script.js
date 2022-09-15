@@ -1,5 +1,5 @@
 const taskContainer = document.querySelector(".task__container");
-// let globalStore = [];
+let globalStore = [];
 
 const generateNewCard = (formData) =>
   `
@@ -13,16 +13,16 @@ const generateNewCard = (formData) =>
           <div class="d-flex">
             <div class="p-2 w-100"> </div>
             <div class="p-2 flex-shrink-1">
-              <button type="button" class="btn btn-danger" style="border-radius:50%;" id=${formData.id} onclick="deleteCard.apply(this, arguments)"><i class="fas fa-trash-alt" id=${formData.id}
-                  onclick="deleteCard.apply(this, arguments)"></i></button>
+              <button type="button" class="btn-close" id=${formData.id} onclick="deleteCard.apply(this, arguments)"> </button>
             </div>
           </div>
-
         </div>
         <div class="card-body">
           <h5 class="card-title">${formData.fname}</h5>
-          <p class="card-text">${formData.jobTitle}</p>
-          <p class="card-text"><small class="text-muted">${formData.jobDescription}</small></p>
+          <p class="card-text">${formData.email}</p>
+          <p class="card-text">${formData.website}</p>
+          <p class="card-text"><a herf="${formData.gender}" target="_blank">${formData.gender}</a></p>
+          <p class="card-text">${formData.skill}</p>
         </div>
       </div>
     </div>
@@ -57,22 +57,30 @@ const deleteCard = (event) => {
   localStorage.setItem("unique__id__12345", JSON.stringify({cards: globalStore}));
 
   if(tagname === "BUTTON") {
-    return taskContainer.removeChild(event.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode);
+    return taskContainer.removeChild(event.target.parentNode.parentNode.parentNode.parentNode.parentNode);
   }
   else {
-      return taskContainer.removeChild(event.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode);
+      return taskContainer.removeChild(event.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode);
   }
 
 }
 
 
+
 const saveChanges = () => {
+
+  // var markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+  // for (var checkbox of markedCheckbox) {
+  //   document.body.append(checkbox.value + ' ');
+  // }
   const formData = {
     id: `${Date.now()}`,
     imageUrl: document.getElementById("image__url").value,
     fname: document.getElementById("f__name").value,
-    jobTitle: document.getElementById("job__title").value,
-    jobDescription: document.getElementById("job__description").value
+    email: document.getElementById("e__mail").value,
+    gender: document.querySelector('input[name="gender"]:checked').value,
+    skill: document.querySelector('input[name="skill"]:checked').value,
+    website: document.getElementById("web__site").value
   };
 
     taskContainer.insertAdjacentHTML("beforeend", generateNewCard(formData));
