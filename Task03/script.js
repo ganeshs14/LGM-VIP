@@ -20,8 +20,8 @@ const generateNewCard = (formData) =>
         <div class="card-body">
           <h5 class="card-title">${formData.fname}</h5>
           <p class="card-text">${formData.email}</p>
-          <p class="card-text">${formData.website}</p>
-          <p class="card-text"><a herf="${formData.gender}" target="_blank">${formData.gender}</a></p>
+          <p class="card-text"><a href="${formData.website}" target="_blank">${formData.website}</a></p>
+          <p class="card-text">${formData.gender}</p>
           <p class="card-text">${formData.skill}</p>
         </div>
       </div>
