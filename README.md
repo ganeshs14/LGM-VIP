@@ -1,5 +1,5 @@
 # LGM-VIP
 
-Virtual Internship Program
+<h1>Virtual Internship Program</h1>
 
-by LetsGrowMore
+<p>by <a href="https://letsgrowmore.in/">LetsGrowMore</a> </p>
