@@ -4,7 +4,7 @@ let API = async () => {
   let file = await response.json();
   let info = file.data.map((element) => {
      return `
-  <div class="card m-3 shadow">
+  <div class="card m-3 shadow bg-dark text-white">
   <div class="row g-0">
     <div class="col-md-4">
       <img src="${element.avatar}" class="img-fluid rounded-circle m-3" alt="">
@@ -19,7 +19,7 @@ let API = async () => {
   </div>
 </div>
   `;
-   })
+})
    .join("");
    cards.innerHTML = info;
 };
